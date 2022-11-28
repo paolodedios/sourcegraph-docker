@@ -1,0 +1,18 @@
+################################################################################
+#
+# Docker compose overrides
+#
+# @see https://docs.sourcegraph.com/admin/deploy/docker-compose
+# @see https://docs.sourcegraph.com/admin/deploy/docker-compose/configuration
+#
+################################################################################
+
+---
+# file: docker-compose.override.yaml
+
+version: "2.4"
+services:
+  caddy:
+    ports:
+      - "0.0.0.0:9080:80"
+      - "0.0.0.0:9443:443"
